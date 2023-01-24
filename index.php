@@ -1,33 +1,22 @@
 <?php
 
-// class Credits
-// {
-//     public $director;
-//     public $producer;
-//     public $screenwriter;
-// }
-
-
-// classe
+// Classe
 class Movie
 {
-
-    // variabili/attributi d'istanza
+    // Variabili/Attributi d'istanza
     public $title;
     public $genre;
 
-    // public Credits $credits;
 
-
-    // costruttore
+    // Costruttore
     public function __construct($_title, $_genre)
     {
         $this->title = $_title;
         $this->genre = $_genre;
-        // $this->credits = $_credits;
     }
 
-    // metodo/funzione
+
+    // Metodo/Funzione
     public function getHtml()
     {
         return 'Movie: ' . $this->title
@@ -36,10 +25,10 @@ class Movie
     }
 }
 
-// oggetti/istanze
+// Oggetti/Istanze
 $joker = new Movie('Joker', 'Crime');
 $cmbyn = new Movie('Call Me By Your Name', 'Romantic');
 
-echo $joker->getHtml() . '<br><br>';
-
-echo $cmbyn->getHtml();
+echo '1 <br>' . $joker->getHtml()
+    . '<br><br>';
+echo '2 <br>' . $cmbyn->getHtml();
